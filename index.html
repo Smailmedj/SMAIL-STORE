@@ -1,74 +1,57 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>SMAIL STORE</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMAIL STORE</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="auth-box" style="display:none;">
-    <h2>إنشاء حساب</h2>
-    <input type="text" id="signup-user" placeholder="اسم المستخدم"><br><br>
-    <input type="password" id="signup-pass" placeholder="كلمة السر"><br><br>
-    <button id="signup-btn">إنشاء حساب</button>
+<div class="container">
+  <h1>SMAIL STORE</h1>
+  <p>نقدّم لك أفضل متجر إلكتروني في المغرب</p>
 
-    <h2>تسجيل الدخول</h2>
-    <input type="text" id="login-user" placeholder="اسم المستخدم"><br><br>
-    <input type="password" id="login-pass" placeholder="كلمة السر"><br><br>
-    <button id="login-btn">دخول</button>
-    <button id="back-btn">رجوع</button>
-</div>
+  <div id="cart">🛒 السلة: <span id="cart-count">0</span></div>
+  <div id="total">المجموع: <span id="total-price">0</span> DH</div>
 
-<div id="store">
-    <header>
-        <h1>SMAIL STORE</h1>
-    </p>نقدّم لك أفضل متجر إلكتروني في المغرب</p>
-    </header>
+  <div class="products">
 
-    <div id="cart">🛒 السلة: <span id="cart-count">0</span></div>
-    <div id="total">المجموع: <span id="total-price">0</span> DH</div>
-
-    <button id="clear-cart">إفراغ السلة</button>
-    <button id="checkout">إتمام الشراء</button>
-
-    <div id="payment-form" style="display:none;">
-        <h2>صفحة الدفع</h2>
-        <input type="text" placeholder="الاسم"><br><br>
-        <input type="text" placeholder="رقم الهاتف"><br><br>
-        <input type="text" placeholder="العنوان"><br><br>
-        <button id="pay-now">تأكيد الطلب</button>
-        <button id="payment-back">رجوع</button>
+    <div class="product">
+      <img src="ps5.png" alt="PS5">
+      <h2>PS5</h2>
+      <p>7000 DH</p>
+      <button class="add-btn">أضف للسلة</button>
     </div>
 
-    <section class="products">
-        <div class="product">
-            <img src="iphone13.png">
-            <h2>iPhone 13</h2>
-            <p>9000 DH</p>
-            <button>أضف للسلة</button>
-        </div>
+    <div class="product">
+      <img src="a22.png" alt="Samsung A22">
+      <h2>Samsung A22</h2>
+      <p>2500 DH</p>
+      <button class="add-btn">أضف للسلة</button>
+    </div>
 
-        <div class="product">
-            <img src="a22.png">
-            <h2>Samsung Galaxy A22</h2>
-            <p>2500 DH</p>
-            <button>أضف للسلة</button>
-        </div>
+    <div class="product">
+      <img src="iphone13.png" alt="iPhone 13">
+      <h2>iPhone 13</h2>
+      <p>9000 DH</p>
+      <button class="add-btn">أضف للسلة</button>
+    </div>
 
-        <div class="product">
-            <img src="ps5.png">
-            <h2>PlayStation 5</h2>
-            <p>7000 DH</p>
-            <button>أضف للسلة</button>
-        </div>
-    </section>
+  </div>
 
-    <footer>
-        <p>الهاتف: 06529141114</p>
-    </footer>
+  <button id="checkout">إتمام الشراء</button>
+
+  <div id="payment-form" style="display:none;">
+    <h2>تأكيد الطلب</h2>
+    <input id="name" placeholder="الاسم"><br><br>
+    <input id="phone" placeholder="رقم الهاتف"><br><br>
+    <input id="address" placeholder="العنوان"><br><br>
+    <button id="pay-now">تأكيد الطلب</button>
+  </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
